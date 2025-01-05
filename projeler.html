@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Etiketleri -->
+    <meta name="description"
+        content="Ertuğrul Balsüzen'in web tasarım ve geliştirme projeleri. Portfolio çalışmaları ve örnek projeler.">
+    <meta name="keywords" content="web projeler, portfolio, web tasarım örnekleri, frontend projeler">
+    <meta name="author" content="Ertuğrul Balsüzen">
+    <meta name="robots" content="index, follow">
+
+    <title>Projelerim - Ertuğrul Balsüzen</title>
+    <link rel="canonical" href="https://www.sizinsiteniz.com/projeler">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="ert.jpeg">
+    <link rel="shortcut icon" type="image/jpeg" href="ert.jpeg">
+</head>
+
+<body>
+    <div class="bg-overlay"></div>
+    <div class="container">
+        <header class="glass-nav" role="banner">
+            <nav role="navigation" aria-label="Ana menü">
+                <div class="logo" aria-label="Site logosu">EB</div>
+                <div class="hamburger" aria-label="Menü butonu" role="button" tabindex="0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home" aria-hidden="true"></i> Ana Sayfa</a></li>
+                    <li><a href="hakkimda.html"><i class="fas fa-user" aria-hidden="true"></i> Hakkımda</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main role="main">
+            <section class="projects-header glass-card">
+                <h1><i class="fas fa-code-branch" aria-hidden="true"></i> Projelerim</h1>
+            </section>
+
+            <div class="projects-grid">
+                <!-- Sadece bir proje kalacak -->
+                <article class="project-card glass-card">
+                    <div class="project-image">
+                        <img src="meb.jpg" alt="Proje görüntüsü" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h2>Online Sınıf Defteri Projesi - ROBOTEK 2023 İkincilik Ödülü</h2>
+                        <p class="project-description">
+                            ROBOTEK 2023'te Eğitim Teknolojileri kategorisinde lise düzeyinde ikincilik ödülü kazanan bu
+                            proje, Türkiye'nin teknolojik gelişimini ve inovasyon projelerini tanıtmayı hedefleyen bir
+                            interaktif web uygulamasıdır. Takımımız, öğretmenimizin rehberliğinde, kullanıcı dostu bir
+                            arayüz ve dinamik içeriklerle bilgilendirici bir platform geliştirmiştir. Proje,
+                            yaratıcılığı ve işlevselliği ile büyük beğeni kazanmıştır..
+                        </p>
+                        <div class="project-links">
+                            <a href="https://www.newsfindy.com/pazar-necat-sagbas-anadolu-lisesi-il-ikincisi-oldu-18688-haberi" class="project-btn" aria-label="Haber detayları için tıklayın">
+                                <i class="fas fa-newspaper" aria-hidden="true"></i> Detaylı bilgi
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <footer role="contentinfo">
+            <p>&copy; <time datetime="2024">2024</time> Ertuğrul Balsüzen | Tüm hakları saklıdır</p>
+        </footer>
+    </div>
+
+    <!-- Yapısal veri işaretlemesi -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "CollectionPage",
+        "name": "Projelerim",
+        "description": "Ertuğrul Balsüzen'in web tasarım ve geliştirme projeleri",
+        "author": {
+            "@type": "Person",
+            "name": "Ertuğrul Balsüzen"
+        }
+    }
+    </script>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function () {
+            this.classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.hamburger').classList.remove('active');
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
